@@ -1,11 +1,19 @@
 h1 {
-	font-weight: bolder;
+	font-family: 'Chango';
+	font-size: 56px;
+
 }
 
 .jumbotron {
 	background: lightblue;
 }
 
-.hover {
+.answer {
+	border-radius: 5px;
+	background: lightgrey;
+	padding: 5px;	
+}
+
+.answer:hover {
 	background-color: yellow;
 }

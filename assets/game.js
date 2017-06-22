@@ -50,8 +50,9 @@ var gifArray = [
 $(document).ready(function() {
 
 function startScreen() {
-	startDisplay = "<p class='text-center main-button-container'><a class='btn btn-primary btn-lg btn-block start-button' href='#' role='button'>Start Quiz</a></p>";
+	startDisplay = "<p class='text-center main-button-container'><a class='btn btn-primary btn-lg btn-block start-button' role='button'>Ready?</a></p>";
 	$(".mainArea").html(startDisplay);
+
 }
 
 startScreen();
@@ -63,6 +64,7 @@ $("body").on("click", ".start-button", function(event){
 }); 
 
 $("body").on("click", ".answer", function(event){
+
 	selectedAnswer = $(this).text();
 	if(selectedAnswer === correctAnswers[questionCounter]) {
 
@@ -75,7 +77,7 @@ $("body").on("click", ".answer", function(event){
 	}
 }); // Close .answer click
 
-$("body").on("click", ".reset-button", function(event){
+$("body").on("click", ".reset-button", function(event){	
 	gameReset();
 }); // Closes reset-button click
 
@@ -83,7 +85,7 @@ $("body").on("click", ".reset-button", function(event){
 
 function resultFromTimeOut() {
 	missedTotal++;
-	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + 
+	gameHTML = "<p class='text-center timer-p'>Time Left: <span class='timer'>" + 
 	counter + "</span></p>" + "<p class='text-center'>You ran out of time! " + 
 	'<iframe class="center-block img-right" src="https://media.giphy.com/media/RBeddeaQ5Xo0E/giphy.gif" width="480" height="400" frameBorder="0">';
 	$(".mainArea").html(gameHTML);
@@ -92,7 +94,7 @@ function resultFromTimeOut() {
 
 function winResult() {
 	correctTotal++;
-	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" 
+	gameHTML = "<p class='text-center timer-p'>Time Left: <span class='timer'>" 
 	+ counter + "</span></p>" + "<p class='text-center'> Correct!" + gifArray[questionCounter];
 	$(".mainArea").html(gameHTML);
 	setTimeout(wait, 4000); 
@@ -100,7 +102,7 @@ function winResult() {
 
 function lossResult() {
 	wrongTotal++;
-	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>" + 
+	gameHTML = "<p class='text-center timer-p'>Time Left: <span class='timer'>" + 
 	counter + "</span></p>" + "<p class='text-center'>Wrong!" +  
 	'<iframe class="center-block img-right" src="https://media.giphy.com/media/hPPx8yk3Bmqys/giphy.gif" width="480" height="500" frameBorder="0">';
 	$(".mainArea").html(gameHTML);
@@ -108,7 +110,7 @@ function lossResult() {
 }
 
 function generateHTML() {
-	gameHTML = "<p class='text-center timer-p'>Time Remaining: <span class='timer'>15</span></p><p class='text-center'>" + 
+	gameHTML = "<p class='text-center timer-p'>Time Left: <span class='timer'>15</span></p><p class='text-center'>" + 
 	questionArray[questionCounter] + "</p><p class='first-answer answer'>A. " + 
 	answerArray[questionCounter][0] + "</p><p class='answer'>B. " + answerArray[questionCounter][1]+
 	"</p><p class='answer'>C. " + answerArray[questionCounter][2] + "</p><p class='answer'>D. " + answerArray[questionCounter][3] + "</p>";
