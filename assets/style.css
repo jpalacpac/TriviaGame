@@ -4,6 +4,10 @@ h1 {
 
 }
 
+p {
+	font-family: 'Sriracha';
+}
+
 .jumbotron {
 	background: lightblue;
 }
