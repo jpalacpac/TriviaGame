@@ -25,7 +25,8 @@ var questionArray = [
 '"The things you own end up owning you."', 
 '"Wanna hear the most annoying sound in the world?"', 
 '"The greatest trick the devil ever pulled was convincing the world he didn\'t exist."', 
-'"Go ahead, make my day."', '"Open the pod bay doors, please, HAL"', 
+'"Go ahead, make my day."', 
+'"Dave, stop. Stop, will you? Stop, Dave. Will you stop Dave? Stop, Dave."', 
 '"They call it a Royale with cheese."'];
 
 var answerArray = [
